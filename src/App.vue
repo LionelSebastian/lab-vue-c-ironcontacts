@@ -68,9 +68,13 @@ export default{
       return this.contacts.sort(function(a, b) {
           let keyA = a.popularity;
           let keyB = b.popularity;          
-          if (keyA < keyB) return 1;
-          if (keyA > keyB) return -1;
-         return 0;
+          if (keyA < keyB) {
+            return 1;              
+            }
+          if (keyA > keyB){
+          return -1;
+          } 
+          return 0;
       });
     },
 
@@ -110,5 +114,8 @@ export default{
   table{
     margin: auto;
     margin-top: 50px;
+  }
+  th {
+    padding: 7px;
   }
 </style>
