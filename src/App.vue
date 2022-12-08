@@ -1,7 +1,9 @@
 <template>
-<header class="text-center">
-  <h1 class="text-center text-3xl">Mi carrito de contactos</h1>
+
+<header >
+  <h1>Mi carrito de contactos</h1>
 </header>
+
 <body>
 
   <button @click="add()">Agregar un nuevo contacto</button>
@@ -20,6 +22,7 @@
         <th>Action</th>
       </tr>    
     </thead>
+
     <tbody>
       <tr v-for="(contact, index) in contacts">
         <th>{{(index+1)}}</th>         
@@ -39,15 +42,14 @@
     </tbody>
  </table>
   
-  </body>
-
+</body>
 </template>
 
 <script>
 import CONTACTS from "./contacts.json";
 
 export default{
- computed:{  
+  computed:{  
   },
 
   data(){
