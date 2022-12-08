@@ -14,7 +14,12 @@
           <th><img width="50" :src="contact.pictureUrl" alt="foto de perfil"></th>
           <th>{{ contact.name }}</th>
           <th>{{ contact.popularity }} </th>
-          <th> <img v-if="item." src="./" alt=""></th>
+          <th> 
+            <img v-if="(contact.wonOscar === true)" src="../public/trophy.png" alt="Trophy" width="20">
+          </th>
+          <th>
+            <img v-if="(contact.wonEmmy === true)" src="../public/trophy.png" alt="Trophy">
+          </th>
         </tr>
       </tbody>
    </table>
@@ -29,7 +34,7 @@ export default{
   },
   data(){
     return{
-      contacts:CONTACTS.slice(0,5),
+      contacts:CONTACTS.slice(0,9),
     };
   },
 };
