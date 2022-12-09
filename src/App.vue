@@ -60,12 +60,19 @@ export default{
 
   methods:{ 
     add(){      
-      let newContact =CONTACTS[Math.floor(Math.random()*CONTACTS.length)];
-      return this.contacts.push(newContact);
-    }, 
+      let newContact =CONTACTS[Math.floor(Math.random()*CONTACTS.length)]; 
+      if (this.contacts.includes(newContact) === false) {
+        return this.contacts.push(newContact);
+      }
+      else{
+        this.add()
+      }
+    },
+
     borrar(num){
       return this.contacts.splice(num,1);
     },
+
     sortPop(){
       return this.contacts.sort(function(a, b) {
           let keyA = a.popularity;
@@ -97,7 +104,6 @@ export default{
   }, 
 
 };
-
 </script>
 
 <style scoped>
