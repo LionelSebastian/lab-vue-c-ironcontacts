@@ -74,7 +74,7 @@ export default{
     },
 
     sortPop(){
-      return this.contacts.sort(function(a, b) {
+     this.contacts =  this.contacts.sort(function(a, b) {
           let keyA = a.popularity;
           let keyB = b.popularity;          
           if (keyA < keyB) {
